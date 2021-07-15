@@ -1,0 +1,33 @@
+{
+  "engines": {
+    "node": "14.x"
+  },
+  "name": "matrixx-test-tool-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main/server.js",
+  "author": "Khaled Sallam",
+  "license": "ISC",
+  "scripts": {
+    "build": "npm run tsc",
+    "start": "node ./dist/main/server.js",
+    "dev": "concurrently \"npm:nodemon:watch\" \"npm:tsc:watch\"",
+    "nodemon:watch": "nodemon --inspect=0.0.0.0:9229 ./dist/main/server.js",
+    "tsc": "tsc",
+    "tsc:watch": "tsc --watch --pretty --preserveWatchOutput"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.3.2",
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.12",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "boxen": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
